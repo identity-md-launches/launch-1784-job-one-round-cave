@@ -1,0 +1,21 @@
+{
+  "wallFormat": "PNG",
+  "wallDimensions": [
+    1254,
+    1254
+  ],
+  "previewFormat": "JPEG",
+  "previewDimensions": [
+    512,
+    512
+  ],
+  "previewBytes": 74874,
+  "recordNumber": 28,
+  "recordShapeAndHashValid": true,
+  "olderRecordsUnchanged": true,
+  "goalByteForByteUnchanged": true,
+  "allLineFilesAtMost100KB": true,
+  "namedWallAndCurrentWallIdentical": true,
+  "testsPassed": 37,
+  "unmetVisualRequirements": []
+}

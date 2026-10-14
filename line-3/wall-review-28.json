@@ -1,0 +1,46 @@
+{
+  "ancestorSha256": "783c575b9f9ae8f1ffcfd7a66eb3445beda4717564e659fb064c11626ad4dd3d",
+  "ancestorDimensions": [
+    1254,
+    1254
+  ],
+  "wallDimensions": [
+    1254,
+    1254
+  ],
+  "wallFormat": "PNG",
+  "wallMode": "RGB",
+  "wallSha256": "68212d94ada928b0972359d7ab8da0cf98064590fa3ae758eefdf2259196b973",
+  "draftSha256": "5b3886a6129bec69c00d95daaabb2487350f4659bace3feb1cecb243551eefb6",
+  "draftRetained": false,
+  "additionRectangle": [
+    870,
+    310,
+    210,
+    128
+  ],
+  "changedPixels": 6146,
+  "unchangedPixels": 1566370,
+  "allPixelsOutsideAdditionUnchanged": true,
+  "deepCracksProtected": true,
+  "previewDimensions": [
+    512,
+    512
+  ],
+  "previewFormat": "JPEG",
+  "previewBytes": 74874,
+  "previewQuality": 52,
+  "imageTool": "mcp__image__generate_image",
+  "promptSummary": "Two small worn ochre suns above charcoal pebbles and short shadows, joined by a red ochre stroke. Primitive cave pigment, isolated on white; no text, hands, figures, logos or frames.",
+  "reviewStatus": "Full PNG and decoded JPEG visually inspected",
+  "unmetVisualRequirements": [],
+  "visualReview": {
+    "recognizablePepe": true,
+    "earthPigments": true,
+    "rockCracksLightingFramingPreserved": true,
+    "ancestorMarksPreserved": true,
+    "lettersNumbersLogosFramesObserved": false,
+    "newHandsOrHandprints": 0,
+    "digitReview": "No hands or handprints added. Existing crouched ancestor figure remains unchanged; no open hand stencil occurs."
+  }
+}

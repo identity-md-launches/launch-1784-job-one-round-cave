@@ -1,0 +1,72 @@
+{
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/paired-freshness/paired.py",
+        "--demo"
+      ],
+      "exitCode": 0,
+      "state": "corroborated_within_time_budget",
+      "accepted": true
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/paired-freshness/paired.py",
+        "--replay",
+        "line-3/tools/paired-freshness/paired-evidence.json",
+        "--policy",
+        "line-3/tools/paired-freshness/observed-policy.json",
+        "--as-of",
+        "1792012453",
+        "--max-head-age",
+        "120",
+        "--max-finalized-age",
+        "1200",
+        "--future-skew",
+        "60"
+      ],
+      "exitCode": 0,
+      "state": "corroborated_within_time_budget",
+      "accepted": true
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "line-3/tools/paired-freshness",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exitCode": 0,
+      "testOutput": "test_both_stale_even_when_payment_passes (test_paired.PairedTests.test_both_stale_even_when_payment_passes) ... ok\ntest_demo_cli_and_missing_explicit_time (test_paired.PairedTests.test_demo_cli_and_missing_explicit_time) ... ok\ntest_equal_amount_different_sender_rejected (test_paired.PairedTests.test_equal_amount_different_sender_rejected) ... ok\ntest_exact_envelopes_request_types_and_consumption (test_paired.PairedTests.test_exact_envelopes_request_types_and_consumption) ... ok\ntest_expected_policy_mismatch (test_paired.PairedTests.test_expected_policy_mismatch) ... ok\ntest_fail_closed_output_limit (test_paired.PairedTests.test_fail_closed_output_limit) ... ok\ntest_invalid_time_and_unfinalized_policy_before_network (test_paired.PairedTests.test_invalid_time_and_unfinalized_policy_before_network) ... ok\ntest_live_capture_replay_equivalence (test_paired.PairedTests.test_live_capture_replay_equivalence) ... ok\ntest_missing_timestamps_refused (test_paired.PairedTests.test_missing_timestamps_refused) ... ok\ntest_no_proxy_environment_discovery (test_paired.PairedTests.test_no_proxy_environment_discovery) ... ok\ntest_one_stale_provider_rejects_pair (test_paired.PairedTests.test_one_stale_provider_rejects_pair) ... ok\ntest_policy_shortfall_both_providers (test_paired.PairedTests.test_policy_shortfall_both_providers) ... ok\ntest_real_pair_and_immutable_inputs (test_paired.PairedTests.test_real_pair_and_immutable_inputs) ... ok\ntest_second_provider_failure_never_falls_back (test_paired.PairedTests.test_second_provider_failure_never_falls_back) ... ok\ntest_single_provider_duplicate_swapped_or_wrong_sources (test_paired.PairedTests.test_single_provider_duplicate_swapped_or_wrong_sources) ... ok\ntest_timestamp_disagreement_even_when_both_fresh (test_paired.PairedTests.test_timestamp_disagreement_even_when_both_fresh) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.127s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "line-3/tools/settlement-freshness",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exitCode": 0,
+      "testOutput": "test_actual_zto_observation_at_trial_time (test_freshness.FreshnessTests.test_actual_zto_observation_at_trial_time) ... ok\ntest_demo_and_cli_require_explicit_time_and_expected_policy (test_freshness.FreshnessTests.test_demo_and_cli_require_explicit_time_and_expected_policy) ... ok\ntest_different_header_at_same_height_refused (test_freshness.FreshnessTests.test_different_header_at_same_height_refused) ... ok\ntest_every_timestamp_required_and_strict (test_freshness.FreshnessTests.test_every_timestamp_required_and_strict) ... ok\ntest_exact_transcript_requests_envelopes_and_consumption (test_freshness.FreshnessTests.test_exact_transcript_requests_envelopes_and_consumption) ... ok\ntest_future_skew_boundary (test_freshness.FreshnessTests.test_future_skew_boundary) ... ok\ntest_inconsistent_time_order_refused (test_freshness.FreshnessTests.test_inconsistent_time_order_refused) ... ok\ntest_independent_head_and_finalized_age_limits (test_freshness.FreshnessTests.test_independent_head_and_finalized_age_limits) ... ok\ntest_independently_selected_policy_must_match (test_freshness.FreshnessTests.test_independently_selected_policy_must_match) ... ok\ntest_invalid_time_limits_and_policy_before_transport (test_freshness.FreshnessTests.test_invalid_time_limits_and_policy_before_transport) ... ok\ntest_live_capture_and_replay_have_same_decision (test_freshness.FreshnessTests.test_live_capture_and_replay_have_same_decision) ... ok\ntest_missing_receipt_fails_with_no_finalized_anchor (test_freshness.FreshnessTests.test_missing_receipt_fails_with_no_finalized_anchor) ... ok\ntest_old_settled_payment_is_compatible_with_fresh_head (test_freshness.FreshnessTests.test_old_settled_payment_is_compatible_with_fresh_head) ... ok\ntest_older_timestamp_free_transcript_refused (test_freshness.FreshnessTests.test_older_timestamp_free_transcript_refused) ... ok\ntest_payment_failure_cannot_pass_just_because_time_passes (test_freshness.FreshnessTests.test_payment_failure_cannot_pass_just_because_time_passes) ... ok\ntest_provider_failure_has_no_sample_or_fallback (test_freshness.FreshnessTests.test_provider_failure_has_no_sample_or_fallback) ... ok\ntest_reverted_payment_fails (test_freshness.FreshnessTests.test_reverted_payment_fails) ... ok\ntest_saved_evidence_cannot_choose_the_clock (test_freshness.FreshnessTests.test_saved_evidence_cannot_choose_the_clock) ... ok\ntest_stale_evidence_fails_despite_accepted_payment (test_freshness.FreshnessTests.test_stale_evidence_fails_despite_accepted_payment) ... ok\ntest_timestamp_change_on_same_hash_refused (test_freshness.FreshnessTests.test_timestamp_change_on_same_hash_refused) ... ok\ntest_transport_does_not_discover_environment (test_freshness.FreshnessTests.test_transport_does_not_discover_environment) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 0.085s\n\nOK\n"
+    }
+  ],
+  "newTests": 16,
+  "ancestorFreshnessTests": 21,
+  "allPassed": true
+}

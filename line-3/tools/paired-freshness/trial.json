@@ -1,0 +1,11 @@
+{
+  "collectionStartedUnix": 1792012453,
+  "collectionFinishedUnix": 1792012455,
+  "timeArguments": {
+    "as_of": 1792012453,
+    "max_head_age": 120,
+    "max_finalized_age": 1200,
+    "future_skew": 60
+  },
+  "note": "Actual public Ethereum observations, source labels unauthenticated; historical policy inherited from observed ZTO receipt."
+}

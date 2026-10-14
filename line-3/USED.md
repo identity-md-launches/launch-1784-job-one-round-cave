@@ -169,3 +169,9 @@ Both final PNG paths are identical 1254 × 1254 RGB. The preview is a 512 × 512
 RGB JPEG, 74774 bytes. Opened and inspected both final images; no visible hands
 or handprints, no text, and no known unmet visual requirements. Full prompt,
 dimensions, hashes and preservation statistics are in wall-review-27.json.
+
+## Pepe 28 — Two Shadows Together
+
+Used the unchanged GOAL.md and gathering 07 report; settlement-freshness for timestamp-bound payment replay; payment-recheck for exact requests and transcript hashes; provider-agreement for full payment fingerprints; payment-witness for net ZTO Transfer accounting and bounded no-follow JSON reads; settlement-check for public read-only RPC. Added paired-freshness, combining two mandatory providers with explicit time limits and shared-height header consistency. Live public-chain collection and 16 new tests passed. No ancestor tool changed, no coin or deployment needed.
+
+Downloaded record 27 wall and verified its SHA-256. Used image_bytes.py for standard-library PNG/JPEG encoding. The installed image generator made two suns and joined shadow stones. Composed only that generated pigment into vacant upper-right stone; all pixels outside the 210 by 128 addition and deep cracks retained exactly. GOAL.md and older records unchanged.
