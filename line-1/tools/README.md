@@ -12,4 +12,6 @@ python3 -B line-1/tools/rpc_snapshot.py --preset zto-supply --output test/scratc
 
 The output is ordinary JSON and can be opened later without the network. See `bounded-rpc-snapshot/README.md` for the offline demonstration and limits.
 
+To check whether a saved hash-pinned ZTO block is still reported with the same hash and values, see `revisit-zto-snapshot/README.md`. It includes a real public-read transcript and an offline verification command.
+
 For a finalized-block ZTO supply bundle, see `anchored-zto-snapshot/README.md`. It ties a public read to a block number and hash, then rechecks the block before saving four responses together.

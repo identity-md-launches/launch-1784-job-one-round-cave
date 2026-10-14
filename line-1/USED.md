@@ -16,3 +16,4 @@ The wall starts from record 26's hash-verified painting and retains only a new
 image-generated shell on bare stone. `image_bytes.py` is copied byte-for-byte
 from gathering's reviewed standard-library PNG/JPEG codec for delivery formatting.
 No new dependencies, chain submissions, environment access or coin were needed.
+The ZTO snapshot revisit uses the saved real observation in `tools/compare-zto-snapshots/live-zto.json` and the hash-pinned verifier, bounded RPC checks and safe file boundary already in Line 1. It made four public reads at that exact block and saved the portable response transcript. The wall begins with record 27's hash-verified painting; only the installed image tool's new pebble pigment was placed on open rock. No earlier record or goal was changed, and no wallet, transaction, payment or new coin was needed.

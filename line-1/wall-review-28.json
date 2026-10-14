@@ -1,0 +1,44 @@
+{
+  "ancestor_sha256": "f9c5d45898b050679bd36711c33833a632e42224a570c4c47f8ad3e0d5f9a11d",
+  "wall_sha256": "4f3a96b34323a5d19cae938b63c61198e062b81e27ec18405ca9971fae003ab6",
+  "format": "PNG",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGB",
+  "output_paths": [
+    "artifacts/line-1/wall.png",
+    "artifacts/line-1/wall-v8.png"
+  ],
+  "changed_pixels": 5367,
+  "unchanged_pixels": 1567149,
+  "changed_bounds_inclusive": [
+    316,
+    196,
+    378,
+    367
+  ],
+  "outside_addition_identical": true,
+  "preview": {
+    "path": "dist/line-1/28.jpg",
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 75671
+  },
+  "generation": {
+    "tool": "mcp__image__create_models_predictions",
+    "model": "black-forest-labs/flux-kontext-pro",
+    "prediction_id": "r0etp7qaz1rmr0d17gvsy5ctr4",
+    "draft_sha256": "b7e56e44bbd9df3add39aea08dd091f1deb8bcd4824d4d8366d9e51615599d51",
+    "draft_dimensions": [
+      1024,
+      1024
+    ],
+    "draft_retained": false,
+    "postprocess": "Only new pebble pigment retained; ancestor pixels elsewhere restored exactly."
+  },
+  "visual_review": {
+    "status": "inspected final PNG; no known unmet visual requirements",
+    "unmet_visual_requirements": []
+  }
+}
