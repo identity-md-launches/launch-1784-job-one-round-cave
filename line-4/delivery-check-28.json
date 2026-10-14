@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "authority": "local structural and byte checks, not independent certification",
+  "record": 28,
+  "wall": {
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "format": "PNG",
+    "mode": "RGB",
+    "sha256": "d0899d81145c8538c75a3af1d6f3d72bd7ea6285653bd7c9e932fac3508e80ae"
+  },
+  "preview": {
+    "dimensions": [
+      512,
+      512
+    ],
+    "format": "JPEG",
+    "bytes": 77946
+  },
+  "goalExactlyUnchanged": true,
+  "olderRecordsUnchanged": true,
+  "sourceCopyHashesMatch": true,
+  "changedPixels": 988,
+  "unchangedPixels": 1571528,
+  "allChangedPixelsInVacantAdditionBounds": true,
+  "deepCracksPreserved": true,
+  "imageOutputsUntracked": true,
+  "withinAssignedPaths": true,
+  "unmetVisualRequirements": []
+}

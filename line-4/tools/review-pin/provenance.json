@@ -1,0 +1,39 @@
+{
+  "unchangedCopies": [
+    {
+      "source": "line-4/tools/request-set-check/typed_digest.py",
+      "copy": "typed_digest.py",
+      "sha256": "a6903cd67fd837f18be3546721830228646df5e144c04f7a5cbd40c5f21854d9"
+    },
+    {
+      "source": "line-4/tools/request-set-check/typed_trace.py",
+      "copy": "typed_trace.py",
+      "sha256": "5c31aee1c6c845e2624448938a586016dd6304f768b1f793852919ec907ca78d"
+    },
+    {
+      "source": "line-4/tools/request-set-check/request_compare.py",
+      "copy": "request_compare.py",
+      "sha256": "c9bae636437c25a66d8eb459cd3450d3a6ac5c12b458b97f06613bb594c8c71e"
+    },
+    {
+      "source": "line-4/tools/request-set-check/rpc_request_check.py",
+      "copy": "rpc_request_check.py",
+      "sha256": "512ae8ec269f6f648352f722677b6e0ffb4c44e54cb2200030fbc0d5e9886993"
+    },
+    {
+      "source": "line-4/tools/request-set-check/request_set_check.py",
+      "copy": "request_set_check.py",
+      "sha256": "9d11d435ea6ebce089da20d79f0e8bb3fcdfc4a277a4ffe3e59f2bc30885d05c"
+    },
+    {
+      "source": "line-4/tools/request-set-check/zto-set.json",
+      "copy": "zto-set.json",
+      "sha256": "b4c7a6317a5bb9be7588b0dc18f3e29eff1829136b730f91df92e3d5bcfd2d18"
+    },
+    {
+      "source": "line-4/tools/request-set-check/missing-set.json",
+      "copy": "missing-set.json",
+      "sha256": "2936d2849f291835031b7047e5b0c3fc1af865095f5cdea5558995df4a4287ac"
+    }
+  ]
+}

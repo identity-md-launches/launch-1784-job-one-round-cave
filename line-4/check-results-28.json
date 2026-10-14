@@ -1,0 +1,106 @@
+{
+  "results": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "line-4/tools/review-pin",
+        "-v"
+      ],
+      "exit": 0,
+      "expectedExit": 0,
+      "stdout": "",
+      "stderr": "test_bad_pin_syntax (test_review_pin.PinTests.test_bad_pin_syntax) ... ok\ntest_canonical_protocol_bytes (test_review_pin.PinTests.test_canonical_protocol_bytes) ... ok\ntest_cli_outside_hidden_and_malformed_pin (test_review_pin.PinTests.test_cli_outside_hidden_and_malformed_pin) ... ok\ntest_cli_pin_accept_missing (test_review_pin.PinTests.test_cli_pin_accept_missing) ... ok\ntest_client_alteration_rejected_with_correct_pin (test_review_pin.PinTests.test_client_alteration_rejected_with_correct_pin) ... ok\ntest_domain_and_field_order_change_pin (test_review_pin.PinTests.test_domain_and_field_order_change_pin) ... ok\ntest_dynamic_preimage_not_only_digest (test_review_pin.PinTests.test_dynamic_preimage_not_only_digest) ... ok\ntest_historical_zto_and_pinned_fixture (test_review_pin.PinTests.test_historical_zto_and_pinned_fixture) ... ok\ntest_invalid_empty_duplicate_or_method (test_review_pin.PinTests.test_invalid_empty_duplicate_or_method) ... ok\ntest_invalid_unused_type_still_rejected (test_review_pin.PinTests.test_invalid_unused_type_still_rejected) ... ok\ntest_label_membership_order_bound (test_review_pin.PinTests.test_label_membership_order_bound) ... ok\ntest_public_account_bound_separately (test_review_pin.PinTests.test_public_account_bound_separately) ... ok\ntest_size_bound_and_immutable (test_review_pin.PinTests.test_size_bound_and_immutable) ... ok\ntest_strict_json (test_review_pin.PinTests.test_strict_json) ... ok\ntest_substitution_of_both_inputs_rejected (test_review_pin.PinTests.test_substitution_of_both_inputs_rejected) ... ok\ntest_summary_cannot_bypass_parent_report_limit (test_review_pin.PinTests.test_summary_cannot_bypass_parent_report_limit) ... ok\ntest_transport_format_case_and_integer_equivalence (test_review_pin.PinTests.test_transport_format_case_and_integer_equivalence) ... ok\ntest_unused_valid_type_not_signed_or_pinned (test_review_pin.PinTests.test_unused_valid_type_not_signed_or_pinned) ... ok\ntest_wrong_pin_never_opens_client (test_review_pin.PinTests.test_wrong_pin_never_opens_client) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.241s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/review-pin/review_pin.py",
+        "check",
+        "line-4/tools/review-pin/zto-set.json",
+        "line-4/tools/review-pin/zto-set.json",
+        "--expect",
+        "c1f7a3ff0b7cf878d16be782f567b2bf89f88e9b962ed64210eeaeb2cf6d7023"
+      ],
+      "exit": 0,
+      "expectedExit": 0,
+      "stdout": "{\n  \"version\": 1,\n  \"pinMatches\": true,\n  \"expectedPin\": \"c1f7a3ff0b7cf878d16be782f567b2bf89f88e9b962ed64210eeaeb2cf6d7023\",\n  \"actualPin\": \"c1f7a3ff0b7cf878d16be782f567b2bf89f88e9b962ed64210eeaeb2cf6d7023\",\n  \"pinScheme\": \"eip712-request-review-pin:v1\",\n  \"pinTrust\": \"expected pin must be independently retained after review; not a signature\",\n  \"accepted\": true,\n  \"comparison\": {\n    \"version\": 1,\n    \"accepted\": true,\n    \"intendedOrder\": [\n      \"zto-receipt-review\"\n    ],\n    \"clientOrder\": [\n      \"zto-receipt-review\"\n    ],\n    \"membershipMatches\": true,\n    \"orderMatches\": true,\n    \"missing\": [],\n    \"added\": [],\n    \"items\": [\n      {\n        \"reviewId\": \"zto-receipt-review\",\n        \"digestMatches\": true,\n        \"encodingMatches\": true,\n        \"intended\": {\n          \"primaryType\": \"PaymentEvidence\",\n          \"domainSeparator\": \"0xb841b9b4b38823bdf4340d649cbad52a49cb75b55ddd1f91b457246dcb4f807d\",\n          \"messageHash\": \"0xac6db73f194d768dad814f953bcc998a7338581d687e8a9107ca85ed94077599\",\n          \"digest\": \"0xf33e2506e5c103f98dbfe3feb6d4b87d55f1fad4e423dbaa8462465ff4ab9774\"\n        },\n        \"client\": {\n          \"primaryType\": \"PaymentEvidence\",\n          \"domainSeparator\": \"0xb841b9b4b38823bdf4340d649cbad52a49cb75b55ddd1f91b457246dcb4f807d\",\n          \"messageHash\": \"0xac6db73f194d768dad814f953bcc998a7338581d687e8a9107ca85ed94077599\",\n          \"digest\": \"0xf33e2506e5c103f98dbfe3feb6d4b87d55f1fad4e423dbaa8462465ff4ab9774\"\n        },\n        \"differenceCount\": 0,\n        \"intendedSource\": \"caller-supplied; not authenticated by this tool\",\n        \"typedDataMatches\": true,\n        \"accountMatches\": true,\n        \"accepted\": true,\n        \"intendedAccount\": \"0x2d30e495a15f2657d57c3e2caa08b06415c26cbf\",\n        \"clientAccount\": \"0x2d30e495a15f2657d57c3e2caa08b06415c26cbf\",\n        \"transport\": {\n          \"intended\": \"provider\",\n          \"client\": \"provider\"\n        },\n        \"ignoredMetadata\": \"JSON-RPC id and transport wrapper are not signed or compared\",\n        \"accountBinding\": \"compared separately; public account parameter is not part of the EIP-712 digest\"\n      }\n    ],\n    \"reviewIds\": \"caller-assigned labels, not signed or authenticated\",\n    \"ignoredMetadata\": \"JSON-RPC id and provider/JSON-RPC wrapper; review order is required\",\n    \"intendedSource\": \"caller-supplied; requires independent review\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/review-pin/review_pin.py",
+        "check",
+        "line-4/tools/review-pin/zto-set.json",
+        "line-4/tools/review-pin/missing-set.json",
+        "--expect",
+        "c1f7a3ff0b7cf878d16be782f567b2bf89f88e9b962ed64210eeaeb2cf6d7023"
+      ],
+      "exit": 1,
+      "expectedExit": 1,
+      "stdout": "{\n  \"version\": 1,\n  \"pinMatches\": true,\n  \"expectedPin\": \"c1f7a3ff0b7cf878d16be782f567b2bf89f88e9b962ed64210eeaeb2cf6d7023\",\n  \"actualPin\": \"c1f7a3ff0b7cf878d16be782f567b2bf89f88e9b962ed64210eeaeb2cf6d7023\",\n  \"pinScheme\": \"eip712-request-review-pin:v1\",\n  \"pinTrust\": \"expected pin must be independently retained after review; not a signature\",\n  \"accepted\": false,\n  \"comparison\": {\n    \"version\": 1,\n    \"accepted\": false,\n    \"intendedOrder\": [\n      \"zto-receipt-review\"\n    ],\n    \"clientOrder\": [],\n    \"membershipMatches\": false,\n    \"orderMatches\": false,\n    \"missing\": [\n      \"zto-receipt-review\"\n    ],\n    \"added\": [],\n    \"items\": [],\n    \"reviewIds\": \"caller-assigned labels, not signed or authenticated\",\n    \"ignoredMetadata\": \"JSON-RPC id and provider/JSON-RPC wrapper; review order is required\",\n    \"intendedSource\": \"caller-supplied; requires independent review\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "line-4/tools/request-set-check",
+        "-v"
+      ],
+      "exit": 0,
+      "expectedExit": 0,
+      "stdout": "",
+      "stderr": "test_added (test_request_set.SetTests.test_added) ... ok\ntest_aggregate_report_cap (test_request_set.SetTests.test_aggregate_report_cap) ... ok\ntest_case_and_transport_id_equivalence (test_request_set.SetTests.test_case_and_transport_id_equivalence) ... ok\ntest_changed_amount_has_pointer (test_request_set.SetTests.test_changed_amount_has_pointer) ... ok\ntest_cli_accept_and_summary (test_request_set.SetTests.test_cli_accept_and_summary) ... ok\ntest_cli_outside_and_symlink (test_request_set.SetTests.test_cli_outside_and_symlink) ... ok\ntest_cli_reject_missing (test_request_set.SetTests.test_cli_reject_missing) ... ok\ntest_cycle_and_bad_unicode (test_request_set.SetTests.test_cycle_and_bad_unicode) ... ok\ntest_duplicate_id_either_side (test_request_set.SetTests.test_duplicate_id_either_side) ... ok\ntest_empty_intended_never_vacuously_accepted (test_request_set.SetTests.test_empty_intended_never_vacuously_accepted) ... ok\ntest_entry_cap_and_max_label (test_request_set.SetTests.test_entry_cap_and_max_label) ... ok\ntest_historical_match (test_request_set.SetTests.test_historical_match) ... ok\ntest_label_bounds (test_request_set.SetTests.test_label_bounds) ... ok\ntest_malformed_unmatched_request_not_hidden (test_request_set.SetTests.test_malformed_unmatched_request_not_hidden) ... ok\ntest_missing (test_request_set.SetTests.test_missing) ... ok\ntest_no_mutation (test_request_set.SetTests.test_no_mutation) ... ok\ntest_renamed (test_request_set.SetTests.test_renamed) ... ok\ntest_reordered_even_with_identical_payloads (test_request_set.SetTests.test_reordered_even_with_identical_payloads) ... ok\ntest_schema_shapes (test_request_set.SetTests.test_schema_shapes) ... ok\ntest_strict_json_duplicate_float_and_depth (test_request_set.SetTests.test_strict_json_duplicate_float_and_depth) ... ok\ntest_summary_does_not_bypass_report_cap (test_request_set.SetTests.test_summary_does_not_bypass_report_cap) ... ok\ntest_wrong_account_equal_digest (test_request_set.SetTests.test_wrong_account_equal_digest) ... ok\n\n----------------------------------------------------------------------\nRan 22 tests in 0.233s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "tool/review_pin.py",
+        "check",
+        "tool/zto-set.json",
+        "tool/zto-set.json",
+        "--expect",
+        "c1f7a3ff0b7cf878d16be782f567b2bf89f88e9b962ed64210eeaeb2cf6d7023"
+      ],
+      "cwd": "test/scratch/review-pin-round28 (detached ordinary folder)",
+      "exit": 0,
+      "stdout": "{\n  \"version\": 1,\n  \"pinMatches\": true,\n  \"expectedPin\": \"c1f7a3ff0b7cf878d16be782f567b2bf89f88e9b962ed64210eeaeb2cf6d7023\",\n  \"actualPin\": \"c1f7a3ff0b7cf878d16be782f567b2bf89f88e9b962ed64210eeaeb2cf6d7023\",\n  \"pinScheme\": \"eip712-request-review-pin:v1\",\n  \"pinTrust\": \"expected pin must be independently retained after review; not a signature\",\n  \"accepted\": true,\n  \"comparison\": {\n    \"version\": 1,\n    \"accepted\": true,\n    \"intendedOrder\": [\n      \"zto-receipt-review\"\n    ],\n    \"clientOrder\": [\n      \"zto-receipt-review\"\n    ],\n    \"membershipMatches\": true,\n    \"orderMatches\": true,\n    \"missing\": [],\n    \"added\": [],\n    \"items\": [\n      {\n        \"reviewId\": \"zto-receipt-review\",\n        \"digestMatches\": true,\n        \"encodingMatches\": true,\n        \"intended\": {\n          \"primaryType\": \"PaymentEvidence\",\n          \"domainSeparator\": \"0xb841b9b4b38823bdf4340d649cbad52a49cb75b55ddd1f91b457246dcb4f807d\",\n          \"messageHash\": \"0xac6db73f194d768dad814f953bcc998a7338581d687e8a9107ca85ed94077599\",\n          \"digest\": \"0xf33e2506e5c103f98dbfe3feb6d4b87d55f1fad4e423dbaa8462465ff4ab9774\"\n        },\n        \"client\": {\n          \"primaryType\": \"PaymentEvidence\",\n          \"domainSeparator\": \"0xb841b9b4b38823bdf4340d649cbad52a49cb75b55ddd1f91b457246dcb4f807d\",\n          \"messageHash\": \"0xac6db73f194d768dad814f953bcc998a7338581d687e8a9107ca85ed94077599\",\n          \"digest\": \"0xf33e2506e5c103f98dbfe3feb6d4b87d55f1fad4e423dbaa8462465ff4ab9774\"\n        },\n        \"differenceCount\": 0,\n        \"intendedSource\": \"caller-supplied; not authenticated by this tool\",\n        \"typedDataMatches\": true,\n        \"accountMatches\": true,\n        \"accepted\": true,\n        \"intendedAccount\": \"0x2d30e495a15f2657d57c3e2caa08b06415c26cbf\",\n        \"clientAccount\": \"0x2d30e495a15f2657d57c3e2caa08b06415c26cbf\",\n        \"transport\": {\n          \"intended\": \"provider\",\n          \"client\": \"provider\"\n        },\n        \"ignoredMetadata\": \"JSON-RPC id and transport wrapper are not signed or compared\",\n        \"accountBinding\": \"compared separately; public account parameter is not part of the EIP-712 digest\"\n      }\n    ],\n    \"reviewIds\": \"caller-assigned labels, not signed or authenticated\",\n    \"ignoredMetadata\": \"JSON-RPC id and provider/JSON-RPC wrapper; review order is required\",\n    \"intendedSource\": \"caller-supplied; requires independent review\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tool",
+        "-v"
+      ],
+      "cwd": "test/scratch/review-pin-round28 (detached ordinary folder)",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_bad_pin_syntax (test_review_pin.PinTests.test_bad_pin_syntax) ... ok\ntest_canonical_protocol_bytes (test_review_pin.PinTests.test_canonical_protocol_bytes) ... ok\ntest_cli_outside_hidden_and_malformed_pin (test_review_pin.PinTests.test_cli_outside_hidden_and_malformed_pin) ... ok\ntest_cli_pin_accept_missing (test_review_pin.PinTests.test_cli_pin_accept_missing) ... ok\ntest_client_alteration_rejected_with_correct_pin (test_review_pin.PinTests.test_client_alteration_rejected_with_correct_pin) ... ok\ntest_domain_and_field_order_change_pin (test_review_pin.PinTests.test_domain_and_field_order_change_pin) ... ok\ntest_dynamic_preimage_not_only_digest (test_review_pin.PinTests.test_dynamic_preimage_not_only_digest) ... ok\ntest_historical_zto_and_pinned_fixture (test_review_pin.PinTests.test_historical_zto_and_pinned_fixture) ... ok\ntest_invalid_empty_duplicate_or_method (test_review_pin.PinTests.test_invalid_empty_duplicate_or_method) ... ok\ntest_invalid_unused_type_still_rejected (test_review_pin.PinTests.test_invalid_unused_type_still_rejected) ... ok\ntest_label_membership_order_bound (test_review_pin.PinTests.test_label_membership_order_bound) ... ok\ntest_public_account_bound_separately (test_review_pin.PinTests.test_public_account_bound_separately) ... ok\ntest_size_bound_and_immutable (test_review_pin.PinTests.test_size_bound_and_immutable) ... ok\ntest_strict_json (test_review_pin.PinTests.test_strict_json) ... ok\ntest_substitution_of_both_inputs_rejected (test_review_pin.PinTests.test_substitution_of_both_inputs_rejected) ... ok\ntest_summary_cannot_bypass_parent_report_limit (test_review_pin.PinTests.test_summary_cannot_bypass_parent_report_limit) ... ok\ntest_transport_format_case_and_integer_equivalence (test_review_pin.PinTests.test_transport_format_case_and_integer_equivalence) ... ok\ntest_unused_valid_type_not_signed_or_pinned (test_review_pin.PinTests.test_unused_valid_type_not_signed_or_pinned) ... ok\ntest_wrong_pin_never_opens_client (test_review_pin.PinTests.test_wrong_pin_never_opens_client) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.225s\n\nOK\n"
+    },
+    {
+      "check": "symlink rejected",
+      "exit": 2,
+      "stderr": "review-pin: [Errno 40] Too many levels of symbolic links: 'linked.json'\n"
+    }
+  ],
+  "authority": "local observations only; historical ZTO replay, no fresh chain observation"
+}

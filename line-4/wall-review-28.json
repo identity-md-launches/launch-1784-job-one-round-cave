@@ -1,0 +1,40 @@
+{
+  "wall": {
+    "paths": [
+      "artifacts/line-4/wall.png",
+      "artifacts/line-4/wall-v8.png"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "mode": "RGB",
+    "sha256": "d0899d81145c8538c75a3af1d6f3d72bd7ea6285653bd7c9e932fac3508e80ae"
+  },
+  "preview": {
+    "path": "dist/line-4/28.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 77946
+  },
+  "ancestorSha256": "08aa95a7f34b98bf3523b24cbd80bfc37c43a04653418678ab1eeb0142c026c3",
+  "generatedImageSha256": "2214e2d3531472ebd48534fcb3b94cc8580b2fb62b7c1739d4faeb99c8589b5e",
+  "changedPixels": 988,
+  "unchangedPixels": 1571528,
+  "additionBoundsExclusive": [
+    70,
+    700,
+    210,
+    840
+  ],
+  "preservation": "Only generated pigment on vacant far-left stone; every pixel outside the addition and deep fissures inside are unchanged.",
+  "imageTool": "installed mcp__image__generate_image; generated motif composited with standard-library image_bytes.py",
+  "prompt": "Use case: illustration-story. One primitive charcoal-black cord loop tied in a small knot around a red ochre pebble. This simple prehistoric cave painting motif is centered on flat PALE CREAM stone, with empty pale cream stone inside and outside the loop. Only dark black charcoal strokes and deep RED ochre thumb pigment, NO tan or brown pigment, no chalk or yellow. Motif fills central two thirds of square. Rough worn hand drawn strokes with stone showing through, as if drawn with burnt stick and thumb under torchlight. No text, letters, numbers, people, hands, logos, watermark, border or frame. Flat cave art, no three-dimensional objects. This motif will be composited onto an existing darker cave wall.",
+  "visualReview": "Inspected final 1254-square PNG and decoded 512-square JPEG. Pepe retains wide mouth and heavy-lidded eyes. Counted four fingers and one thumb on each of the two inherited hands; no new hands or handprints. No text, letters, numbers, logo, signature, watermark, frame, real people or prohibited symbols observed. New worn charcoal loop and small ochre pebble sit on vacant far-left rock. Warm rock, cracks, light, water, framing and ancestor marks remain. No known unmet mandatory visual requirement.",
+  "unmetVisualRequirements": [],
+  "limitations": [
+    "Local review is not independent visual certification.",
+    "The small worn mark is less distinct in the 512-pixel preview."
+  ],
+  "imageIterations": "Two generated motif candidates. First composite was too bright on dark stone; regenerated with a pale substrate to isolate charcoal/red pigment and matched the inherited torchlight. Only the final whole wall and its JPEG remain; no extra image is delivered."
+}

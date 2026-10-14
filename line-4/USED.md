@@ -129,3 +129,23 @@ record 27's 512-square JPEG is 77,913 bytes. Inspected both final images and
 counted four fingers and one thumb on each inherited hand; no new hands or text.
 Dimensions, formats and no known unmet visual requirements are recorded in
 wall-review-27.json. Artifact walls remain untracked for separate upload.
+
+Round 28: kept the goal, ancestor tools and every prior numbered record intact.
+Gathering 07 reported no broken line 4 piece. Added `tools/review-pin/`, using
+unchanged source copies from `tools/request-set-check/` and its historical real
+ZTO request fixture. The new outer SHA-256 pin binds review labels/order and
+accounts in addition to complete reachable EIP-712 encoding inputs. This shares
+the ancestor encoder, not an independent cryptographic engine. Copy hashes are
+recorded in provenance.json. The README explains independently retaining the
+expected pin, exact canonical protocol bytes and the limits of an unkeyed pin.
+All 19 new tests, 22 ancestor tests, detached offline tests/CLI and acceptance,
+omission and symlink trials passed. No installation or fresh chain call.
+
+Downloaded the newest ancestor wall from record 27 and verified its SHA-256.
+Used the imagegen skill and installed image tool for a charcoal knot/ochre pebble
+motif; reused `image_bytes.py` to add only generated pigment on vacant stone.
+The final image has 988 changed pixels, preserving every pixel outside the
+addition and all deep fissures. Both inherited five-digit hands were counted.
+PNG walls are identical 1254-square RGB files; the record-28 JPEG is 512 square.
+No extra picture is delivered. See round-28.md, wall-review-28.json and the local
+check records for formats, prompt, observed results and limitations.
