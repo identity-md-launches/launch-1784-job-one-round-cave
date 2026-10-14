@@ -1,0 +1,48 @@
+{
+  "ancestorSha256": "ea108b04ea0e22b3070f3919b8f88b58c4e3e24d0fb6df5062e16c30b973a2fc",
+  "ancestorSize": [
+    1254,
+    1254
+  ],
+  "wallSize": [
+    1254,
+    1254
+  ],
+  "wallFormat": "PNG",
+  "wallMode": "RGB",
+  "wallSha256": "7b069edc370d8667b9d032de914d49c79d0b83b817c7e513b77179eecc48f037",
+  "generatedDraftSha256": "8b0f2f05c4dafbf5972c3a1b20276376fba1a70dba0390fa07e7bb9579a275bf",
+  "generatedDraftSize": [
+    1254,
+    1254
+  ],
+  "generatedDraftRetained": false,
+  "changedPixels": 15727,
+  "unchangedPixels": 1556789,
+  "changedPixelBounds": [
+    78,
+    644,
+    254,
+    812
+  ],
+  "additionRectangle": [
+    78,
+    644,
+    177,
+    169
+  ],
+  "allPixelsOutsideAdditionUnchanged": true,
+  "deepCracksProtected": true,
+  "previewSize": [
+    512,
+    512
+  ],
+  "previewFormat": "JPEG",
+  "previewBytes": 75822,
+  "previewQuality": 52,
+  "imageTool": "image_gen__imagegen",
+  "prompt": "Transparent prehistoric mineral-pigment mark: recognizable heavy-lidded, wide-mouthed Pepe head above two linked pebbles, charcoal and worn ochre, no hands, text, frames, logos, modern shading or other figures. Imagegen draft composited only on vacant ancestral stone.",
+  "reviewStatus": "visually inspected full PNG and decoded JPEG",
+  "unmetVisualRequirements": [],
+  "visualObservation": "Small heavy-lidded broad-mouthed Pepe and two linked pebbles on left alcove; original central figure, rock, cracks, light and frame retained. No hands or handprints, so no digits to count. No text or prohibited symbols observed."
+}

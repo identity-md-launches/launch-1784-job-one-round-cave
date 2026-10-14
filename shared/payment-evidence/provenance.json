@@ -110,5 +110,26 @@
     "sha256": "80b103d4e29cf7ed7ec7560e9b22dfad22abc097ef48dd4862d5cd7425d5939c",
     "copiedSha256": "80b103d4e29cf7ed7ec7560e9b22dfad22abc097ef48dd4862d5cd7425d5939c",
     "adaptation": "none; byte-for-byte source copy"
+  },
+  {
+    "source": "line-3/tools/paired-freshness/paired.py",
+    "copy": "vendor/paired-freshness/paired.py",
+    "sha256": "0ca174dbc96999e73f56f51e00cb2520f7fbfe2a089493a1f4e386a436dfa465",
+    "copiedSha256": "0ca174dbc96999e73f56f51e00cb2520f7fbfe2a089493a1f4e386a436dfa465",
+    "adaptation": "none; byte-for-byte source copy"
+  },
+  {
+    "source": "line-4/tools/review-pin/request_set_check.py",
+    "copy": "vendor/request_set_check.py",
+    "sha256": "9d11d435ea6ebce089da20d79f0e8bb3fcdfc4a277a4ffe3e59f2bc30885d05c",
+    "copiedSha256": "9d11d435ea6ebce089da20d79f0e8bb3fcdfc4a277a4ffe3e59f2bc30885d05c",
+    "adaptation": "none; byte-for-byte source copy"
+  },
+  {
+    "source": "line-4/tools/review-pin/review_pin.py",
+    "copy": "vendor/review_pin.py",
+    "sha256": "25033c04f1425af87d08ed682512f7012f11e3a98581d814c1655dc4684c6def",
+    "copiedSha256": "25033c04f1425af87d08ed682512f7012f11e3a98581d814c1655dc4684c6def",
+    "adaptation": "none; byte-for-byte source copy"
   }
 ]

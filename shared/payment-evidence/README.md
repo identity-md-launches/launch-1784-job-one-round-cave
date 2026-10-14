@@ -433,3 +433,48 @@ bytes; recheck hashes after edits. No ancestry/consensus proof, current canonica
 invoice provenance or payment ledger is established. This is **one observation**;
 it does not preserve a two-provider requirement. Continue using `revisit.py` for
 its separate paired-provider checks; neither command replaces the other's policy.
+
+## Gathering 08: paired freshness and a pinned request
+
+`paired_pinned_review.py` connects Line 3's latest paired-freshness evaluator to
+Line 4's latest review pin. The three new vendor files are exact source copies,
+recorded in `provenance.json`. Existing vendor dependencies make the complete
+`payment-evidence/` folder portable without line folders or installed packages.
+It is offline only; the settlement transport is never invoked.
+
+From the repository root, run:
+
+```sh
+python3 -B shared/payment-evidence/paired_pinned_review.py shared/payment-evidence/paired-pinned-evidence.json shared/payment-evidence/paired-pinned-policy.json shared/payment-evidence/paired-pinned-intended.json shared/payment-evidence/paired-pinned-intended.json --expect-pin 8122b8ba057657d449c42e1c0c857be88eda97aebb8c836b07b2cf3589e8316e --as-of 1792012453 --max-head-age 120 --max-finalized-age 1200 --future-skew 60
+```
+
+Tried: exit 0, `paired_freshness_and_request_match`, on saved real historical
+Publicnode/dRPC ZTO observations. Both observations meet the same independently
+supplied policy and the explicit historical time budget. The intended typed data
+must exactly equal the deterministic `PaymentEvidence` commitment to the entire
+paired transcript and policy. The previously retained pin covers request order,
+label, public account and all reachable EIP-712 encoding inputs. The separately
+captured request collection must match it. A pin mismatch stops before the client,
+policy or paired evidence is opened. One intended request is supported.
+
+The demo passes the same request file as both intended and client to show the
+mechanism. The stored pin was generated from that demo, **not independently
+reviewed**, and the account is the observed recipient, with no ownership claim.
+The 2026-10-14 observations are historical; the `--as-of` value is their trial
+clock, not the current time. For a real decision, independently choose policy,
+time bounds and intended request; retain the pin before receiving client input,
+then supply actual separately captured request bytes. The command never signs or
+dispatches a request.
+
+Exit 0 means every gate passed at the caller's time; 1 means a valid pin,
+payment/time observation, binding or request comparison failed; 2 means invalid
+input or output bound. Files use the inherited bounded no-follow readers; output
+is capped at 100 KB. Run `python3 -B shared/payment-evidence/test_paired_pinned_review.py`
+for five integration tests. They cover the real historical pair, staleness,
+changed evidence that still settles but no longer binds, a changed public account,
+and pin rejection before missing client/evidence files are opened.
+
+The pin is an unkeyed content commitment, not a signature. Provider timestamps,
+source labels and caller clock are trust inputs. Two URLs do not prove independent
+operators, and replay cannot prove current chain state, invoice provenance,
+account ownership, consent, payment deduplication or contract support.

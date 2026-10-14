@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/ce5dbc18003365f5a1bf9014a2a357c2cb5c5dc2335dd0eb9b661ae703d36308",
+  "name": "Two Pebbles in Time",
+  "image": "https://api.imd.fun/artifacts/7b069edc370d8667b9d032de914d49c79d0b83b817c7e513b77179eecc48f037",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Water"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 8
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "paired_pinned_review.py"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe gathers two timely payment observations beneath a pinned request."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
     }
   ]
 }

@@ -45,3 +45,11 @@ ZTO/IMD evidence against explicit caller time and age budgets. Includes real
 historical ZTO fixtures and 13 integration tests. A detached folder reproduces
 both acceptance and stale-evidence rejection offline. It reviews one observation
 and does not substitute for the paired-provider requirements of `revisit.py`.
+
+Gathering 08 adds `payment-evidence/paired_pinned_review.py`: require both saved
+provider observations to satisfy the same payment and time policy, bind an exact
+EIP-712 request to that complete pair, and compare a captured request against an
+independently retained review pin. It vendors the latest paired-freshness and
+review-pin pieces byte-for-byte. The historical ZTO demo and five integration
+tests run offline; neither the demo's pin nor its self-compared request is an
+independent approval or a real signing capture.

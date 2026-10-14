@@ -96,6 +96,21 @@ def main():
         ['shared/payment-evidence/test_time_review.py'],
         ['shared/payment-evidence/time_review.py', 'shared/payment-evidence/example.timed-transcript.json', 'shared/payment-evidence/example.timed-policy.json', '--as-of', '1792008919', '--max-head-age', '120', '--max-finalized-age', '1200', '--future-skew', '30'],
     ])
+    commands.extend([
+        ['line-1/tools/revisit-zto-snapshot/revisit.py', '--verify', 'line-1/tools/compare-zto-snapshots/live-zto.json', 'line-1/tools/revisit-zto-snapshot/live-revisit.json'],
+        ['line-1/tools/revisit-zto-snapshot/test_revisit.py'],
+        ['line-2/tools/bounded-contract/check.py', 'line-2/tools/ordered-deliverables/record.strict.contract.json', 'dist/line-2/28.json'],
+        ['line-2/tools/contract-change/review.py', 'line-2/tools/json-contract/record.contract.json', 'line-2/tools/ordered-deliverables/record.strict.contract.json', 'dist/line-2/26.json', 'dist/line-2/27.json'],
+        ['line-2/tools/contract-change/test_review.py'],
+        ['line-3/tools/paired-freshness/paired.py', '--demo'],
+        ['-m', 'unittest', 'discover', '-s', 'line-3/tools/paired-freshness', '-p', 'test_*.py', '-v'],
+        ['line-4/tools/review-pin/review_pin.py', 'check', 'line-4/tools/review-pin/zto-set.json', 'line-4/tools/review-pin/zto-set.json', '--expect', 'c1f7a3ff0b7cf878d16be782f567b2bf89f88e9b962ed64210eeaeb2cf6d7023'],
+        ['-m', 'unittest', 'discover', '-s', 'line-4/tools/review-pin', '-v'],
+    ])
+    commands.extend([
+        ['shared/payment-evidence/test_paired_pinned_review.py'],
+        ['shared/payment-evidence/paired_pinned_review.py', 'shared/payment-evidence/paired-pinned-evidence.json', 'shared/payment-evidence/paired-pinned-policy.json', 'shared/payment-evidence/paired-pinned-intended.json', 'shared/payment-evidence/paired-pinned-intended.json', '--expect-pin', '8122b8ba057657d449c42e1c0c857be88eda97aebb8c836b07b2cf3589e8316e', '--as-of', '1792012453', '--max-head-age', '120', '--max-finalized-age', '1200', '--future-skew', '60'],
+    ])
     results = []
     for args in commands:
         command = [sys.executable, '-B', *args]
@@ -107,7 +122,7 @@ def main():
         print('PASS' if result.returncode == 0 else 'FAIL', ' '.join(args), flush=True)
     for group in ['line-1', 'line-2', 'line-3', 'line-4', 'shared']:
         selected = [r for r in results if group in r['command'] or (group == 'line-4' and 'test/scratch/typed-digest' in r['command'])]
-        (ROOT / ('gathering/check-07-' + group + '.json')).write_text(json.dumps(selected, separators=(',', ':'))+'\n')
+        (ROOT / ('gathering/check-08-' + group + '.json')).write_text(json.dumps(selected, separators=(',', ':'))+'\n')
     return 0 if all(r['exitCode'] == 0 for r in results) else 1
 
 
