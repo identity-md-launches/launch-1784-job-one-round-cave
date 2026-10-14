@@ -1,0 +1,160 @@
+{
+  "valid": false,
+  "scope": "only the supplied documents; not universal contract compatibility",
+  "no_observed_regressions": false,
+  "summary": {
+    "checked": 1,
+    "still_accepted": 0,
+    "newly_rejected": 1,
+    "newly_accepted": 0,
+    "still_rejected": 0
+  },
+  "contracts": {
+    "before": {
+      "file": "shared/payment-evidence/policy.contract.json",
+      "bytes": 705,
+      "sha256": "9a8fb8297b152df3532caabf62af9c3ea316e5f51fbdbd96dbb0950a09dca47b"
+    },
+    "after": {
+      "file": "line-2/tools/contract-change/proposed-policy.contract.json",
+      "bytes": 706,
+      "sha256": "f085f2002d8d7b674d875e2fa60c138f1d8949770b010f7af1b5a642e5e12290"
+    }
+  },
+  "captured_bytes": 1660,
+  "documents": [
+    {
+      "file": "shared/payment-evidence/example.policy.json",
+      "transition": "newly_rejected",
+      "before": {
+        "valid": true,
+        "error_count": 0,
+        "errors": [],
+        "sources": {
+          "contract": {
+            "file": "shared/payment-evidence/policy.contract.json",
+            "bytes": 705,
+            "sha256": "9a8fb8297b152df3532caabf62af9c3ea316e5f51fbdbd96dbb0950a09dca47b"
+          },
+          "document": {
+            "file": "shared/payment-evidence/example.policy.json",
+            "bytes": 249,
+            "sha256": "37097100e7aa7b44f1686174ecfe30a6e9fef01abb96091a2df953492b526818"
+          }
+        },
+        "coordinates": {
+          "lines": "one-based; LF begins each new line",
+          "columns": "one-based Unicode code points, not display cells or UTF-16 units",
+          "offsets": "zero-based; ranges include start and exclude end",
+          "encoding": "UTF-8; source bytes and CRLF are preserved"
+        }
+      },
+      "after": {
+        "valid": false,
+        "error_count": 1,
+        "errors": [
+          {
+            "path": "/confirmations",
+            "rule": "minimum",
+            "message": "must respect minimum 13",
+            "contract_path": "/properties/confirmations/minimum",
+            "constraint": {
+              "present": true,
+              "type": "integer",
+              "preview": "13",
+              "truncated": false
+            },
+            "observed": {
+              "present": true,
+              "type": "integer",
+              "preview": "12",
+              "truncated": false
+            },
+            "document_source": {
+              "file": "shared/payment-evidence/example.policy.json",
+              "present": true,
+              "value": {
+                "start": {
+                  "line": 6,
+                  "column": 20,
+                  "char_offset": 223,
+                  "byte_offset": 223
+                },
+                "end": {
+                  "line": 6,
+                  "column": 22,
+                  "char_offset": 225,
+                  "byte_offset": 225
+                }
+              },
+              "key": {
+                "start": {
+                  "line": 6,
+                  "column": 3,
+                  "char_offset": 206,
+                  "byte_offset": 206
+                },
+                "end": {
+                  "line": 6,
+                  "column": 18,
+                  "char_offset": 221,
+                  "byte_offset": 221
+                }
+              }
+            },
+            "contract_source": {
+              "file": "line-2/tools/contract-change/proposed-policy.contract.json",
+              "present": true,
+              "value": {
+                "start": {
+                  "line": 34,
+                  "column": 18,
+                  "char_offset": 615,
+                  "byte_offset": 615
+                },
+                "end": {
+                  "line": 34,
+                  "column": 20,
+                  "char_offset": 617,
+                  "byte_offset": 617
+                }
+              },
+              "key": {
+                "start": {
+                  "line": 34,
+                  "column": 7,
+                  "char_offset": 604,
+                  "byte_offset": 604
+                },
+                "end": {
+                  "line": 34,
+                  "column": 16,
+                  "char_offset": 613,
+                  "byte_offset": 613
+                }
+              }
+            }
+          }
+        ],
+        "sources": {
+          "contract": {
+            "file": "line-2/tools/contract-change/proposed-policy.contract.json",
+            "bytes": 706,
+            "sha256": "f085f2002d8d7b674d875e2fa60c138f1d8949770b010f7af1b5a642e5e12290"
+          },
+          "document": {
+            "file": "shared/payment-evidence/example.policy.json",
+            "bytes": 249,
+            "sha256": "37097100e7aa7b44f1686174ecfe30a6e9fef01abb96091a2df953492b526818"
+          }
+        },
+        "coordinates": {
+          "lines": "one-based; LF begins each new line",
+          "columns": "one-based Unicode code points, not display cells or UTF-16 units",
+          "offsets": "zero-based; ranges include start and exclude end",
+          "encoding": "UTF-8; source bytes and CRLF are preserved"
+        }
+      }
+    }
+  ]
+}

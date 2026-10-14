@@ -1,0 +1,127 @@
+{
+  "valid": true,
+  "scope": "only the supplied documents; not universal contract compatibility",
+  "no_observed_regressions": true,
+  "summary": {
+    "checked": 2,
+    "still_accepted": 2,
+    "newly_rejected": 0,
+    "newly_accepted": 0,
+    "still_rejected": 0
+  },
+  "contracts": {
+    "before": {
+      "file": "line-2/tools/json-contract/record.contract.json",
+      "bytes": 360,
+      "sha256": "72eaa3dac848bbc1cc3a34e5023068447ab34d8d54c63a2de4556b2dcee9f9f5"
+    },
+    "after": {
+      "file": "line-2/tools/ordered-deliverables/record.strict.contract.json",
+      "bytes": 3239,
+      "sha256": "3b038e83c270b22a67f7b7d5c89875bbefc458862dd5c785476e9aae34336230"
+    }
+  },
+  "captured_bytes": 4970,
+  "documents": [
+    {
+      "file": "dist/line-2/26.json",
+      "transition": "still_accepted",
+      "before": {
+        "valid": true,
+        "error_count": 0,
+        "errors": [],
+        "sources": {
+          "contract": {
+            "file": "line-2/tools/json-contract/record.contract.json",
+            "bytes": 360,
+            "sha256": "72eaa3dac848bbc1cc3a34e5023068447ab34d8d54c63a2de4556b2dcee9f9f5"
+          },
+          "document": {
+            "file": "dist/line-2/26.json",
+            "bytes": 687,
+            "sha256": "bd535644e5c3cf1d39257176a46f70fe77ea523ce226827f115d8f5ec59084b9"
+          }
+        },
+        "coordinates": {
+          "lines": "one-based; LF begins each new line",
+          "columns": "one-based Unicode code points, not display cells or UTF-16 units",
+          "offsets": "zero-based; ranges include start and exclude end",
+          "encoding": "UTF-8; source bytes and CRLF are preserved"
+        }
+      },
+      "after": {
+        "valid": true,
+        "error_count": 0,
+        "errors": [],
+        "sources": {
+          "contract": {
+            "file": "line-2/tools/ordered-deliverables/record.strict.contract.json",
+            "bytes": 3239,
+            "sha256": "3b038e83c270b22a67f7b7d5c89875bbefc458862dd5c785476e9aae34336230"
+          },
+          "document": {
+            "file": "dist/line-2/26.json",
+            "bytes": 687,
+            "sha256": "bd535644e5c3cf1d39257176a46f70fe77ea523ce226827f115d8f5ec59084b9"
+          }
+        },
+        "coordinates": {
+          "lines": "one-based; LF begins each new line",
+          "columns": "one-based Unicode code points, not display cells or UTF-16 units",
+          "offsets": "zero-based; ranges include start and exclude end",
+          "encoding": "UTF-8; source bytes and CRLF are preserved"
+        }
+      }
+    },
+    {
+      "file": "dist/line-2/27.json",
+      "transition": "still_accepted",
+      "before": {
+        "valid": true,
+        "error_count": 0,
+        "errors": [],
+        "sources": {
+          "contract": {
+            "file": "line-2/tools/json-contract/record.contract.json",
+            "bytes": 360,
+            "sha256": "72eaa3dac848bbc1cc3a34e5023068447ab34d8d54c63a2de4556b2dcee9f9f5"
+          },
+          "document": {
+            "file": "dist/line-2/27.json",
+            "bytes": 684,
+            "sha256": "72f5597b81923afe972d10fe0bca48b721764b0bf39e498be74185df29ac7661"
+          }
+        },
+        "coordinates": {
+          "lines": "one-based; LF begins each new line",
+          "columns": "one-based Unicode code points, not display cells or UTF-16 units",
+          "offsets": "zero-based; ranges include start and exclude end",
+          "encoding": "UTF-8; source bytes and CRLF are preserved"
+        }
+      },
+      "after": {
+        "valid": true,
+        "error_count": 0,
+        "errors": [],
+        "sources": {
+          "contract": {
+            "file": "line-2/tools/ordered-deliverables/record.strict.contract.json",
+            "bytes": 3239,
+            "sha256": "3b038e83c270b22a67f7b7d5c89875bbefc458862dd5c785476e9aae34336230"
+          },
+          "document": {
+            "file": "dist/line-2/27.json",
+            "bytes": 684,
+            "sha256": "72f5597b81923afe972d10fe0bca48b721764b0bf39e498be74185df29ac7661"
+          }
+        },
+        "coordinates": {
+          "lines": "one-based; LF begins each new line",
+          "columns": "one-based Unicode code points, not display cells or UTF-16 units",
+          "offsets": "zero-based; ranges include start and exclude end",
+          "encoding": "UTF-8; source bytes and CRLF are preserved"
+        }
+      }
+    }
+  ]
+}

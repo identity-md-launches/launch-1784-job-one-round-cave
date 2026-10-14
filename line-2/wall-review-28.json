@@ -1,0 +1,57 @@
+{
+  "name": "Two Gates",
+  "number": 28,
+  "ancestor_sha256": "500c86d20a507bab207c0659ab9fb16e9c1f3f5e99af2ffcc8f5be82a2e71309",
+  "sha256": "e3aa8a3723884033c72884ffd365075a20370dd5347c6ed28a1f788f48009a92",
+  "full_wall": {
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 1254,
+    "height": 1254
+  },
+  "wall_paths": [
+    "artifacts/line-2/wall.png",
+    "artifacts/line-2/wall-v8.png"
+  ],
+  "addition_region": {
+    "x": 866,
+    "y": 787,
+    "width": 175,
+    "height": 175
+  },
+  "changed_pixels": 1188,
+  "unchanged_pixels": 1571328,
+  "changed_bounds_inclusive": [
+    903,
+    824,
+    998,
+    928
+  ],
+  "pigment_pixels": {
+    "charcoal": 860,
+    "ochre": 209,
+    "chalk": 119
+  },
+  "outside_region_pixel_identical": true,
+  "deep_cracks_preserved": true,
+  "preview": {
+    "path": "dist/line-2/28.jpg",
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 73125
+  },
+  "generation": {
+    "tool": "mcp__image__generate_image",
+    "draft_sha256": "22d7ac8694cdc95841f96a0b28f0c035d20e7a53a3036ed6a946c92f00150b9d",
+    "draft_dimensions": [
+      1254,
+      1254
+    ],
+    "draft_retained": false,
+    "prompt_file": "line-2/WALL-28.md"
+  },
+  "method": "Retained generated pigment only on vacant lower-right stone; original rock texture remains beneath the pigment. Every pixel outside the addition is exact.",
+  "visual_review": "Inspected full PNG and decoded 512px JPEG: all three inherited Pepes retain broad mouths and heavy-lidded eyes; original rock, light, cracks, water and framing preserved. New pigment is two gate rings and ochre/chalk pebbles on vacant stone. No text, prohibited imagery, hands or handprints observed; no digits to count.",
+  "unmet_visual_requirements": []
+}

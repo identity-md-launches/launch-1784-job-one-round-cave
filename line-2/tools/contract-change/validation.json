@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "new_tests": 15,
+  "inherited_source_tests": 16,
+  "checks": [
+    {
+      "name": "new_regressions",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/contract-change/test_review.py"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "passed": true,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "test_all_four_transitions_and_order (__main__.ChangeTests.test_all_four_transitions_and_order) ... ok\ntest_captured_once_even_when_contract_is_document (__main__.ChangeTests.test_captured_once_even_when_contract_is_document) ... ok\ntest_cli_codes_and_unsafe_paths (__main__.ChangeTests.test_cli_codes_and_unsafe_paths) ... ok\ntest_cli_output_overflow_returns_only_error (__main__.ChangeTests.test_cli_output_overflow_returns_only_error) ... ok\ntest_contracts_checked_before_documents (__main__.ChangeTests.test_contracts_checked_before_documents) ... ok\ntest_empty_duplicate_and_large_corpus_refused_before_read (__main__.ChangeTests.test_empty_duplicate_and_large_corpus_refused_before_read) ... ok\ntest_missing_required_field_has_parent_anchor (__main__.ChangeTests.test_missing_required_field_has_parent_anchor) ... ok\ntest_newly_accepted_is_valid (__main__.ChangeTests.test_newly_accepted_is_valid) ... ok\ntest_no_regression_does_not_mean_valid (__main__.ChangeTests.test_no_regression_does_not_mean_valid) ... ok\ntest_output_budget_never_truncates_success (__main__.ChangeTests.test_output_budget_never_truncates_success) ... ok\ntest_real_record_contract_tightening (__main__.ChangeTests.test_real_record_contract_tightening) ... ok\ntest_real_saved_zto_policy_rejection_and_exact_spans (__main__.ChangeTests.test_real_saved_zto_policy_rejection_and_exact_spans) ... ok\ntest_strict_inputs_fail_closed (__main__.ChangeTests.test_strict_inputs_fail_closed) ... ok\ntest_total_input_budget (__main__.ChangeTests.test_total_input_budget) ... ok\ntest_unicode_crlf_and_escaped_spelling_kept (__main__.ChangeTests.test_unicode_crlf_and_escaped_spelling_kept) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.317s\n\nOK\n"
+    },
+    {
+      "name": "inherited_source_locations",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/source-locator/test_locate.py"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "passed": true,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "test_actual_invalid_report (__main__.SourceTests.test_actual_invalid_report) ... ok\ntest_actual_saved_zto_policy (__main__.SourceTests.test_actual_saved_zto_policy) ... ok\ntest_actual_strict_numbered_record (__main__.SourceTests.test_actual_strict_numbered_record) ... ok\ntest_additional_property_key_span (__main__.SourceTests.test_additional_property_key_span) ... ok\ntest_all_supported_constraints_and_multiplicity (__main__.SourceTests.test_all_supported_constraints_and_multiplicity) ... ok\ntest_all_token_types_and_exact_ranges (__main__.SourceTests.test_all_token_types_and_exact_ranges) ... ok\ntest_cli_exits_and_no_follow_boundaries (__main__.SourceTests.test_cli_exits_and_no_follow_boundaries) ... ok\ntest_empty_and_escaped_missing_names (__main__.SourceTests.test_empty_and_escaped_missing_names) ... ok\ntest_escaped_lexemes_are_not_reserialized (__main__.SourceTests.test_escaped_lexemes_are_not_reserialized) ... ok\ntest_input_identity_commits_formatting (__main__.SourceTests.test_input_identity_commits_formatting) ... ok\ntest_malformed_duplicate_nonfinite_and_encoding_refused (__main__.SourceTests.test_malformed_duplicate_nonfinite_and_encoding_refused) ... ok\ntest_many_flat_tokens (__main__.SourceTests.test_many_flat_tokens) ... ok\ntest_missing_field_and_present_null_are_distinct (__main__.SourceTests.test_missing_field_and_present_null_are_distinct) ... ok\ntest_prefix_tail_and_duplicate_locations (__main__.SourceTests.test_prefix_tail_and_duplicate_locations) ... ok\ntest_root_span_and_trailing_whitespace (__main__.SourceTests.test_root_span_and_trailing_whitespace) ... ok\ntest_unicode_crlf_tabs_and_escaped_key (__main__.SourceTests.test_unicode_crlf_tabs_and_escaped_key) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.065s\n\nOK\n"
+    },
+    {
+      "name": "actual_records",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/contract-change/review.py",
+        "line-2/tools/json-contract/record.contract.json",
+        "line-2/tools/ordered-deliverables/record.strict.contract.json",
+        "dist/line-2/26.json",
+        "dist/line-2/27.json"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "passed": true,
+      "stdout_bytes": 4410,
+      "stdout_sha256": "21b63d2e7e2735cbe1cb81400637ef5cfece930308ef4c3a0dd9c6f16242fed8",
+      "stderr": ""
+    },
+    {
+      "name": "saved_zto_rejection",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/contract-change/review.py",
+        "shared/payment-evidence/policy.contract.json",
+        "line-2/tools/contract-change/proposed-policy.contract.json",
+        "shared/payment-evidence/example.policy.json"
+      ],
+      "expected_exit": 1,
+      "exit_code": 1,
+      "passed": true,
+      "stdout_bytes": 5110,
+      "stdout_sha256": "8138c41dc8c87320d446145add10d3e77ead35a8eef39936f6ed9c50d3a7633a",
+      "stderr": ""
+    },
+    {
+      "name": "new_record",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/source-locator/locate.py",
+        "line-2/tools/ordered-deliverables/record.strict.contract.json",
+        "dist/line-2/28.json"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "passed": true,
+      "stdout_bytes": 734,
+      "stdout_sha256": "0ae8818b5c8fcb16aa0d75268721f8d03765dda84f481fe47d655e8ffcc4c2eb",
+      "stderr": ""
+    }
+  ],
+  "authority": "local observations only; not independent certification"
+}

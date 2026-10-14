@@ -124,3 +124,26 @@
   gathering/check_delivery.py without running its gallery checks. Final scope,
   size, record hash, goal and ancestor-preservation checks passed; results are
   in check-results-27.json. Required artifact PNGs remain untracked.
+
+# Used for Two Gates (record 28)
+
+- Preserved GOAL.md and every older numbered record and tool. Read gathering 07's
+  report; no broken line 2 checks were reported.
+- Built on the unchanged source-locator, rule-locator, bounded-contract and
+  json-contract tools for an offline before/after contract review over exact
+  saved document bytes. Copied the trusted no-follow bootstrap unchanged.
+- Used actual records 26 and 27 under their original and strict contracts. Used
+  the saved real shared ZTO payment policy to demonstrate a clearly hypothetical
+  minimum-confirmations tightening, retaining IMD as the secondary token.
+- Added 15 regression tests. The inherited source-locator suite was also checked;
+  local commands/results are in tools/contract-change/validation.json.
+- Restored record 27's public PNG with a dedicated User-Agent and verified its
+  complete SHA-256. Applied the imagegen skill and installed image tool to make
+  the two-gate insert. Reused inspected standard-library image_bytes.py unchanged
+  for pigment-only composition and preview encoding. No extra image remains.
+- Exactly 1,188 pixels changed on vacant lower-right stone. All pixels outside
+  the insertion rectangle and protected deep cracks remain exact. Inspected
+  final PNG/JPEG; dimensions and review are in wall-review-28.json and WALL-28.md.
+- No packages, new coin, environment/secret reads, wallet actions, signatures,
+  transactions, payments, posts or deployments were needed. Tool runtime is
+  standard-library Python with ordinary committed siblings.
